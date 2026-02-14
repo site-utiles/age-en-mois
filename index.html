@@ -28,6 +28,38 @@
     <script async src="https://cdn.propellerads.com/VOTRE_ZONE_ID.js"></script>
     
     <style>
+        /* === Layout avec pubs latérales === */
+.page-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.side-ads {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.side-ad {
+    width: 160px;
+    height: 600px;
+    background: #f1f2f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive : on cache les pubs sur mobile */
+@media (max-width: 1200px) {
+    .side-ads {
+        display: none;
+    }
+}
+
         :root {
             --primary: #ff6b6b;
             --primary-dark: #ee5a52;
@@ -302,7 +334,24 @@
     <script src="https://pl28716855.effectivegatecpm.com/f4/b3/04/f4b304028b1c1dc2b421a91414772699.js"></script>
 </head>
 <body>
+    
+    <div class="page-wrapper">
+
+    <!-- PUBS GAUCHE -->
+    <div class="side-ads">
+        <div class="side-ad">
+            <!-- Bannière 160x600 #1 -->
+            <div id="left-ad-1"></div>
+        </div>
+
+        <div class="side-ad">
+            <!-- Bannière 160x600 #2 -->
+            <div id="left-ad-2"></div>
+        </div>
+    </div>
+
     <div class="container">
+
         <header>
             <h1>Âge en Mois</h1>
             <p class="subtitle">Calculez votre âge exact en mois</p>
@@ -352,6 +401,7 @@
         <footer>
             <p>Calcul précis basé sur la date d'aujourd'hui</p>
         </footer>
+    </div>
     </div>
 
     <!-- SEO Content Section -->
